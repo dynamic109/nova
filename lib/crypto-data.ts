@@ -21,21 +21,13 @@ export const cryptoOptions = [
 ];
 
 export const currencyOptions = [
+  { code: "NGN", name: "Nigerian Naira", countryCode: "NG" },
   { code: "USD", name: "US Dollar", countryCode: "US" },
   { code: "EUR", name: "Euro", countryCode: "EU" },
   { code: "GBP", name: "British Pound", countryCode: "GB" },
   { code: "JPY", name: "Japanese Yen", countryCode: "JP" },
-  { code: "AUD", name: "Australian Dollar", countryCode: "AU" },
-  { code: "CAD", name: "Canadian Dollar", countryCode: "CA" },
-  { code: "CHF", name: "Swiss Franc", countryCode: "CH" },
-  { code: "CNY", name: "Chinese Yuan", countryCode: "CN" },
-  { code: "INR", name: "Indian Rupee", countryCode: "IN" },
   { code: "MXN", name: "Mexican Peso", countryCode: "MX" },
-  { code: "NGN", name: "Nigerian Naira", countryCode: "NG" },
   { code: "ZAR", name: "South African Rand", countryCode: "ZA" },
-  { code: "KES", name: "Kenyan Shilling", countryCode: "KE" },
-  { code: "GHS", name: "Ghanaian Cedi", countryCode: "GH" },
-  { code: "SGD", name: "Singapore Dollar", countryCode: "SG" },
 ];
 
 export const exchangeOptions = [
@@ -79,8 +71,8 @@ export const countryOptions = [
 ];
 
 export const exchangeRates: Record<string, Record<string, number>> = {
-  ETH: { USD: 3500, EUR: 3200, GBP: 2800 },
-  BNB: { USD: 600, EUR: 550, GBP: 480 },
-  Celo: { USD: 2, EUR: 1.8, GBP: 1.6 },
-  Ton: { USD: 5, EUR: 4.5, GBP: 4 },
+  ETH: { USD: 2939.01, EUR: 2505.77, GBP: 2201.55, NGN: 4279252, JPY: 457339, MXN: 52838, ZAR: 49120 },
+  BNB: { USD: 861.27, EUR: 734.31, GBP: 645.16, NGN: 1254031, JPY: 134023, MXN: 15484.01, ZAR: 14394.71 },
+  Celo: { USD: 0.14, EUR: 0.12, GBP: 0.10, NGN: 198, JPY: 21, MXN: 2.44, ZAR: 2.27 },
+  Ton: { USD: 1.52, EUR: 1.29, GBP: 1.14, NGN: 2207, JPY: 236, MXN: 27.25, ZAR: 25.33 },
 };
