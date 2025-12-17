@@ -1,37 +1,112 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Nova - Crypto to Cash Conversion Platform
 
-## Getting Started
+A modern web application for converting cryptocurrencies to fiat currencies with a streamlined checkout process.
 
-First, run the development server:
+## 🚀 Features
+
+- **Multi-Crypto Support**: Convert ETH, BNB, Celo, and Ton to various fiat currencies
+- **Real-time Conversion**: Automatic calculation with current exchange rates
+- **Multi-step Checkout**: Guided process for crypto-to-cash transactions
+- **Form Validation**: Robust validation using Zod schemas
+- **Responsive Design**: Mobile-first design with Tailwind CSS
+- **Accessible UI**: Built with Shadcn UI components
+
+## 🛠️ Tech Stack
+
+- **Framework**: Next.js 16 (App Router)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS v4
+- **UI Components**: Shadcn UI
+- **Icons**: Lucide React
+
+## 📋 Prerequisites
+
+- Node.js 18+
+- npm, yarn, pnpm, or bun
+
+## 🔧 Setup Instructions
+
+1. **Clone the repository**
+   ```bash
+   git clone <repository-url>
+   cd nova
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   # or
+   yarn install
+   # or
+   pnpm install
+   # or
+   bun install
+   ```
+
+3. **Run the development server**
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   # or
+   pnpm dev
+   # or
+   bun dev
+   ```
+
+4. **Open your browser**
+
+   Navigate to [http://localhost:3000](http://localhost:3000) to view the application.
+
+## 🏗️ Build for Production
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm run build
+npm run start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🔄 Key Functionalities
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Conversion Logic
+- Automatic crypto-to-fiat conversion using predefined exchange rates
+- Support for multiple fiat currencies (USD, EUR, GBP, NGN, JPY, MXN, ZAR)
+- Real-time calculation updates
 
-## Learn More
+### Checkout Flow
+1. **Crypto Selection**: Choose cryptocurrency and amount
+2. **Bank Details**: Enter recipient banking information
+3. **Personal Details**: Provide personal information
+4. **Send Crypto**: Final confirmation and transaction
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## ⚠️ Assumptions & Trade-offs
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Data & APIs
+- **Exchange Rates**: Uses custom exchange rates
+  - *Trade-off*: Not real-time; requires manual updates
+  - *Assumption*: Rates remain relatively stable between updates
 
-## Deploy on Vercel
+- **Crypto Options**: Limited to ETH, BNB, Celo, and Ton
+  - *Trade-off*: Not extensible without code changes
+  - *Assumption*: These are the primary supported cryptocurrencies
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### UI/UX Trade-offs
+- **Loading States**: Simple setTimeout-based loading (1 second)
+  - *Trade-off*: Not representative of real transaction times
+  - *Assumption*: Provides adequate user feedback for demo
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# nova
+- **Navigation**: Uses Next.js router with query params for checkout steps
+  - *Trade-off*: State not preserved on page refresh
+  - *Assumption*: Users complete checkout in single session
+
+## 🚀 Deployment
+
+The application can be deployed to Vercel, Netlify, or any platform supporting Next.js:
+
+```bash
+npm run build
+```
+
+Deploy the `.next` folder and `public` directory.
+
